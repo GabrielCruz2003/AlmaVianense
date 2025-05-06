@@ -1,2 +1,227 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+/* Definição da cor global personalizada e das cores do tema claro e escuro */
+:root {
+    --ion-color-appcor1: #005fa3;
+    --ion-color-appcor1-rgb: 0, 95, 163;
+    --ion-color-appcor1-contrast: #ffffff;
+    --ion-color-appcor1-contrast-rgb: 255, 255, 255;
+    --ion-color-appcor1-shade: #00538f;
+    --ion-color-appcor1-tint: #1a6fb1;
+
+    /* Cor dos ícones no modo claro e escuro */
+    --ion-icon-color: var(--ion-color-appcor1);
+
+    /* Definições de cores padrão para o modo claro */
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+    --ion-item-background-color: #ffffff;
+    --ion-item-text-color: #000000;
+    --ion-toolbar-background: #ffffff;
+    --ion-toolbar-color: #000000;
+    --ion-button-background: #ffffff;
+    --ion-button-color: var(--ion-color-appcor1);
+    --ion-list-background: #ffffff;
+    --ion-list-text-color: #000000;
+
+    /* Definições de cores para o modo escuro */
+    --ion-background-color-dark: #121212;
+    --ion-text-color-dark: #ffffff;
+    --ion-item-background-color-dark: #1c1c1c;
+    --ion-item-text-color-dark: #ffffff;
+    --ion-toolbar-background-dark: #1c1c1c;
+    --ion-toolbar-color-dark: #ffffff;
+    --ion-button-background-dark: #2a2a2a;
+    --ion-button-color-dark: #ffffff;
+
+}
+
+/* Definições da cor personalizada para o modo claro e escuro */
+.ion-color-appcor1 {
+    --ion-color-base: var(--ion-color-appcor1);
+    --ion-color-base-rgb: var(--ion-color-appcor1-rgb);
+    --ion-color-contrast: var(--ion-color-appcor1-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-appcor1-contrast-rgb);
+    --ion-color-shade: var(--ion-color-appcor1-shade);
+    --ion-color-tint: var(--ion-color-appcor1-tint);
+}
+
+body.dark .ion-color-appcor1 {
+    --ion-color-base: var(--ion-color-appcor1-shade);
+    --ion-color-contrast: var(--ion-color-appcor1-contrast);
+    --ion-color-shade: var(--ion-color-appcor1);
+    --ion-color-tint: var(--ion-color-appcor1-tint);
+}
+
+/* Cor de Fundo e de Letra padrão para o modo claro e escuro */
+body {
+    background-color: var(--ion-background-color);
+    color: var(--ion-text-color);
+}
+
+body.dark {
+    background-color: var(--ion-background-color-dark);
+    color: var(--ion-text-color-dark);
+}
+
+/* Menu (CSS para o modo claro e escuro) */
+.menu-botao {
+    color: var(--ion-text-color);
+}
+
+body.dark .menu-botao {
+    color: var(--ion-text-color-dark);
+}
+
+ion-menu {
+    --background: var(--ion-item-background-color);
+    --color: var(--ion-item-text-color);
+    /* CSS para os itens de dentro do menu (No modo claro) */
+    ion-list {
+        background: var(--ion-item-background-color);
+        padding: 0;
+    }
+    ion-item {
+        --background: var(--ion-item-background-color);
+        --color: var(--ion-item-text-color);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    ion-icon {
+        font-size: 22px;
+        color: var(--ion-color-appcor1);
+    }
+    ion-label {
+        font-weight: 500;
+        color: var(--ion-item-text-color);
+    }
+}
+
+body.dark ion-menu {
+    --background: var(--ion-item-background-color-dark);
+    --color: var(--ion-item-text-color-dark);
+    /* CSS para os itens de dentro do menu (No modo escuro) */
+    ion-list {
+        background: var(--ion-item-background-color-dark);
+    }
+    ion-item {
+        --background: var(--ion-item-background-color-dark);
+        --color: var(--ion-item-text-color-dark);
+    }
+    ion-icon {
+        color: var(--ion-color-appcor1);
+    }
+    ion-label {
+        color: var(--ion-item-text-color-dark);
+    }
+}
+
+/* CSS geral para os componentes, no modo claro e escuro */
+/* Ícons */
+ion-icon {
+    color: var(--ion-icon-color);
+}
+body.dark ion-icon {
+    color: var(--ion-icon-color);
+}
+
+/* Conteúdo */
+ion-content {
+    --background: var(--ion-background-color);
+    color: var(--ion-text-color);
+}
+body.dark ion-content {
+    --background: var(--ion-background-color-dark);
+    color: var(--ion-text-color-dark);
+}
+
+/* Cards */
+ion-card {
+    --background: var(--ion-item-background-color);
+    color: var(--ion-item-text-color);
+}
+body.dark ion-card {
+    --background: var(--ion-item-background-color-dark);
+    color: var(--ion-item-text-color-dark);
+}
+
+/* Card content */
+ion-card-content {
+    color: var(--ion-item-text-color);
+}
+body.dark ion-card-content {
+    color: var(--ion-item-text-color-dark);
+}
+
+/* Card title e subtitle */
+ion-card-title,
+ion-card-subtitle {
+    color: var(--ion-item-text-color);
+}
+body.dark ion-card-title,
+body.dark ion-card-subtitle {
+    color: var(--ion-item-text-color-dark);
+}
+
+/* Botões */
+ion-button {
+    --background: var(--ion-button-background);
+    --color: var(--ion-button-color);
+}
+body.dark ion-button {
+    --background: var(--ion-button-background-dark);
+    --color: var(--ion-button-color-dark);
+}
+
+/* Toolbar */
+ion-toolbar {
+    --background: var(--ion-toolbar-background);
+    --color: var(--ion-toolbar-color);
+}
+body.dark ion-toolbar {
+    --background: var(--ion-toolbar-background-dark);
+    --color: var(--ion-toolbar-color-dark);
+}
+ion-toolbar .ion-menu-button {
+    --color: var(--ion-toolbar-color);
+}
+body.dark ion-toolbar .ion-menu-button {
+    --color: var(--ion-toolbar-color-dark);
+}
+
+/* List */
+ion-list {
+    background-color: var(--ion-item-background-color);
+}
+body.dark ion-card ion-list {
+    background-color: var(--ion-item-background-color-dark) !important;
+}
+
+/* Item */
+ion-item {
+    --background: transparent;
+    --color: var(--ion-text-color);
+}
+body.dark ion-item {
+    --background: transparent;
+    --color: var(--ion-text-color-dark);
+}
+/* -- x -- */
+
+/* CSS geral para outras tags no modo claro e escuro */
+p {
+    color: var(--ion-text-color);
+}
+body.dark p {
+    color: var(--ion-text-color-dark);
+}
+
+/* Transições suaves ao mudar entre tema claro ou escuro */
+body,
+ion-content,
+ion-card,
+ion-toolbar,
+ion-button,
+ion-list,
+ion-item,
+ion-icon {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

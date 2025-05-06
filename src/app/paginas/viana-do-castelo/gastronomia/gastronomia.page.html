@@ -1,0 +1,147 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button class="menu-botao" slot="start"></ion-menu-button>
+    <ion-title>{{ 'Gastronomia' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'Sabores de Viana' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ 'Tradição e Sabor' | translate }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{ 'Viana do Castelo é um destino gastronómico de excelência. Com pratos únicos, doces conventuais e produtos locais, cada refeição é uma viagem ao coração da tradição minhota.' | translate }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- PRATOS TÍPICOS -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>🍽️ {{ 'Pratos Típicos' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia01_Sarrabulho.png" alt="Arroz de Sarrabulho" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Arroz de Sarrabulho' | translate }}</h2>
+            <p>{{ 'Com carne de porco e sangue coagulado, servido com rojões.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia02_BacalhauModaViana.png" alt="Bacalhau à Viana" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Bacalhau à Viana' | translate }}</h2>
+            <p>{{ 'Bacalhau frito com cebolada rica em azeite, acompanhado de batata frita às rodelas.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia03_PolvoLagareiro.png" alt="Polvo à Lagareiro" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Polvo à Lagareiro' | translate }}</h2>
+            <p>{{ 'Polvo assado no forno com azeite, alho e batatas a murro — um clássico do Minho.' | translate }}</p>
+          </ion-label>
+        </ion-item>        
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia04_RojoesModaMinho.png" alt="Rojões à Minhota" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Rojões à Minhota' | translate }}</h2>
+            <p>{{ 'Carne de porco frita em vinha-d’alhos, servida com papas de sarrabulho, batatas e grelos.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+        
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- DOCES REGIONAIS-->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>🍰 {{ 'Doces Regionais' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia05_BolaBerlim.png" alt="Bolas de Berlim" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Bolas de Berlim' | translate }}</h2>
+            <p>{{ 'Versão local das tradicionais bolas, muito apreciadas na região.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia06_TortaViana.png" alt="Torta de Viana" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Torta de Viana' | translate }}</h2>
+            <p>{{ 'Doce conventual enrolado com recheio de creme.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia07_PudimAbadePriscos.png" alt="Pudim Abade de Priscos" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Pudim Abade de Priscos' | translate }}</h2>
+            <p>{{ 'Rico e doce, tradicional do Minho e popular em Viana.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- PRODUTOS LOCAIS -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>🍷 {{ 'Produtos Locais' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia08_VinhoVerde.png" alt="Vinho Verde" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Vinho Verde' | translate }}</h2>
+            <p>{{ 'Fresco e leve, acompanha na perfeição os pratos da região.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/img/Gastronomia09_MelMinho.png" alt="Mel do Minho" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ 'Mel do Minho' | translate }}</h2>
+            <p>{{ 'Produzido nas serras vizinhas, ideal para doces e infusões.' | translate }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content> 
+  
+  
+  
+

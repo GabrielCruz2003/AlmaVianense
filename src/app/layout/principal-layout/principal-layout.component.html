@@ -1,0 +1,48 @@
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-menu-button class="menu-botao" slot="start"></ion-menu-button>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <!-- Itera sobre o menu e cria os itens -->
+      <ng-container *ngFor="let page of appPages">
+        <!-- Verifica se page não tem children (submenu) -->
+        <ng-container *ngIf="!page.children">
+          <ion-item [routerLink]="page.url" (click)="closeMenu()">
+            <ion-icon [name]="page.icon" slot="start"></ion-icon>
+            <ion-label>{{ page.title | translate}}</ion-label>
+          </ion-item>
+        </ng-container>
+
+        <!-- Verifica se page tem children (submenu) -->
+        <ng-container *ngIf="page.children">  
+          <ion-item>
+            <ion-label>{{ page.title }}</ion-label>
+          </ion-item>
+            <ion-item *ngFor="let subPage of page.children" [routerLink]="subPage.url" (click)="closeMenu()">
+              <ion-icon *ngIf="subPage.icon" [name]="subPage.icon" slot="start"></ion-icon>
+              <ion-label>{{ subPage.title | translate}}</ion-label>
+            </ion-item>
+        </ng-container>
+      </ng-container>
+    </ion-list>
+    <!-- Adiciona o item de Definições no fundo -->
+    <div class="menu-footer">
+      <ion-list>
+        <ion-item [routerLink]="'/definicoes'" (click)="closeMenu()">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          <ion-label> {{ 'Definições' | translate}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<!-- O conteúdo da página é injetado aqui e renderizado -->
+<ion-content id="main-content">
+  <ng-content></ng-content>
+</ion-content>

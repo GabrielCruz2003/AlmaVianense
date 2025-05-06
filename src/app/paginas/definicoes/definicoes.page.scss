@@ -1,0 +1,11 @@
+.toggle-darkmode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+  
+.toggle-darkmode ion-icon {
+  color: var(--ion-color-appcor1);
+  font-size: 22px;
+}

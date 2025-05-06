@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button class="menu-botao" slot="start"></ion-menu-button>
+    <ion-title>{{ 'Definições' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-content>
+      
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          <div>{{ 'Alterar Tema' | translate }}</div>
+        </ion-col>
+        <ion-col size="auto">
+          <div class="toggle-darkmode">
+            <ion-icon [name]="!isDarkMode ? 'sunny' : 'sunny-outline'"></ion-icon>
+            <ion-toggle [checked]="isDarkMode" (ionChange)="toggleTheme()"></ion-toggle>
+            <ion-icon [name]="isDarkMode ? 'moon' : 'moon-outline'"></ion-icon>
+          </div>          
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <div>{{ 'Alterar Idioma' | translate }}</div>
+      <br />
+      <div>
+        <!-- Botão de cada idioma, com os estilos tendo em conta o valor atual de current language -->
+        <ion-button [disabled]="currentLanguage === 'en' ? 'true' : 'false'"  [fill]="currentLanguage === 'en' ? 'outline' : 'solid'" color="appcor1" (click)="changeLanguage('en')">
+          {{ 'Inglês' | translate }}
+        </ion-button>
+        <ion-button [disabled]="currentLanguage === 'pt' ? 'true' : 'false'"  [fill]="currentLanguage === 'pt' ? 'outline' : 'solid'"  color="appcor1" (click)="changeLanguage('pt')">
+          {{ 'Português' | translate }}
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

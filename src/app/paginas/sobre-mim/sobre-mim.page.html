@@ -1,0 +1,385 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button class="menu-botao" slot="start"></ion-menu-button>
+    <ion-title>{{ 'Sobre Mim' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- PERFIL PROFISSIONAL -->
+  <ion-card class="perfil-section">
+    <ion-card-header>
+      <ion-row>
+        <ion-col>
+          <ion-card-title>Gabriel Cruz</ion-card-title>
+          <ion-card-subtitle>{{ 'Perfil Profissional' | translate }}</ion-card-subtitle>
+        </ion-col>
+        <ion-col>
+          <img src="https://cdn-icons-png.flaticon.com/512/5556/5556468.png" />
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      <a class="email" href="mailto:gabrielcruz@ipvc.pt">
+        <ion-icon name="mail-outline"></ion-icon>
+        gabrielcruz&#64;ipvc.pt
+      </a>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- HABILIDADES -->
+  <div class="section">
+    <ion-button expand="block" (click)="setOpen_habilidades(true)">
+      <ion-icon class="icon1" name="construct-sharp"></ion-icon>
+      <p>{{ 'Habilidades' | translate }}</p>
+      <ion-icon class="icon2" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen_habilidades">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{ 'Habilidades' | translate }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button fill="outline" color="danger" (click)="setOpen_habilidades(false)">{{ 'Fechar' | translate}}</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        <ion-card>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img src="../../../../assets/img/SobreMimHabilidades_01.png" alt="HTML" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>HTML</h2>
+              <p>{{ 'Linguagem de marcação usada para estruturar páginas web.' | translate }}</p>
+            </ion-label>
+          </ion-item>
+          <div style="text-align: center; padding-bottom: 12px;">
+            <a href="https://www.w3schools.com/Html/">
+              <ion-button fill="outline" size="small">
+                {{ 'Saber Mais' | translate }}
+                <ion-icon name="link-outline" slot="end"></ion-icon>
+              </ion-button>
+            </a>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img src="../../../../assets/img/SobreMimHabilidades_02.png" alt="CSS" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>CSS</h2>
+              <p>{{ 'Estiliza visualmente as páginas HTML.' | translate }}</p>
+            </ion-label>
+          </ion-item>
+          <div style="text-align: center; padding-bottom: 12px;">
+            <a href="https://www.w3schools.com/css/" target="_blank">
+              <ion-button fill="outline" size="small">
+                {{ 'Saber Mais' | translate }}
+                <ion-icon name="link-outline" slot="end"></ion-icon>
+              </ion-button>
+            </a>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img src="../../../../assets/img/SobreMimHabilidades_03.png" alt="JavaScript" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>JavaScript</h2>
+              <p>{{ 'Linguagem de programação usada para interatividade no frontend.' | translate }}</p>
+            </ion-label>
+          </ion-item>
+          <div style="text-align: center; padding-bottom: 12px;">
+            <a href="https://www.w3schools.com/js/" target="_blank">
+              <ion-button fill="outline" size="small">
+                {{ 'Saber Mais' | translate }}
+                <ion-icon name="link-outline" slot="end"></ion-icon>
+              </ion-button>
+            </a>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img src="../../../../assets/img/SobreMimHabilidades_04.png" alt="PHP" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>PHP</h2>
+              <p>{{ 'Linguagem de script do lado do servidor usada para desenvolver aplicações web.' | translate }}</p>
+            </ion-label>
+          </ion-item>
+          <div style="text-align: center; padding-bottom: 12px;">
+            <a href="https://www.php.net/" target="_blank">
+              <ion-button fill="outline" size="small">
+                {{ 'Saber Mais' | translate }}
+                <ion-icon name="link-outline" slot="end"></ion-icon>
+              </ion-button>
+            </a>
+          </div>
+        </ion-card>
+
+        <ion-card>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img src="../../../../assets/img/SobreMimHabilidades_05.png" alt="Ionic" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Ionic</h2>
+              <p>{{ 'Framework para construir aplicações móveis e web com tecnologias web como HTML, CSS e JavaScript.'
+                | translate }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-card-content class="ion-text-center">
+            <a href="https://ionicframework.com/docs" target="_blank">
+              <ion-button fill="outline" size="small">
+                {{ 'Saber Mais' | translate }}
+                <ion-icon name="link-outline" slot="end"></ion-icon>
+              </ion-button>
+            </a>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- IDIOMAS -->
+  <div class="section">
+    <ion-button class="button" expand="block" (click)="setOpen_idiomas(true)">
+      <ion-icon class="icon1" name="globe"></ion-icon>
+      <p>{{ 'Idiomas' | translate }}</p>
+      <ion-icon class="icon2" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen_idiomas">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{ 'Idiomas' | translate }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button fill="outline" color="danger" (click)="setOpen_idiomas(false)">{{ 'Fechar' | translate}}</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+        <ion-card class="modal-idiomas">
+          <ion-card-content>
+            <ion-row class="idioma-row">
+              <ion-col class="info-idioma">
+                <div class="nome">{{ 'Português' | translate }}</div>
+                <div class="tipo">{{ 'Fluente (Nativo)' | translate }}</div>
+                <div>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                </div>
+              </ion-col>
+              <ion-col class="flag-col">
+                <img src="../../../../assets/img/SobreMimIdiomas_01.png" alt="Bandeira de Portugal" class="flag-img" />
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="modal-idiomas">
+          <ion-card-content>
+            <ion-row class="idioma-row">
+              <ion-col class="info-idioma">
+                <div class="nome">{{ 'Inglês' | translate }}</div>
+                <div class="tipo">{{ 'Intermédio' | translate }}</div>
+                <div>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star-half-outline"></ion-icon>
+                  <ion-icon class="estrela" name="star-outline"></ion-icon>
+                  <ion-icon class="estrela" name="star-outline"></ion-icon>
+                </div>
+              </ion-col>
+              <ion-col class="flag-col">
+                <img src="../../../../assets/img/SobreMimIdiomas_02.png" alt="Bandeira do Reino Unido" class="flag-img" />
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="modal-idiomas">
+          <ion-card-content>
+            <ion-row class="idioma-row">
+              <ion-col class="info-idioma">
+                <div class="nome">{{ 'Francês' | translate }}</div>
+                <div class="tipo">{{ 'Básico' | translate }}</div>
+                <div>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star"></ion-icon>
+                  <ion-icon class="estrela" name="star-outline"></ion-icon>
+                  <ion-icon class="estrela" name="star-outline"></ion-icon>
+                  <ion-icon class="estrela" name="star-outline"></ion-icon>
+                </div>
+              </ion-col>
+              <ion-col class="flag-col">
+                <img src="../../../../assets/img/SobreMimIdiomas_03.png" alt="Bandeira da França" class="flag-img" />
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- EDUCAÇÃO -->
+  <div class="section">
+    <ion-button expand="block" (click)="setOpen_educacao(true)">
+      <ion-icon class="icon1" name="school"></ion-icon>
+      <p>{{ 'Educação' | translate }}</p>
+      <ion-icon class="icon2" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen_educacao">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{ 'Educação' | translate }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button fill="outline" color="danger" (click)="setOpen_educacao(false)">{{ 'Fechar' | translate }}</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+
+        <ion-card class="modal-educacao">
+          <img src="../../../../assets/img/SobreMimEducacao_01.png" alt="Escola Básica e Secundária de Barroselas" />
+
+          <ion-card-header>
+            <ion-card-title class="titulo-ensino">{{ 'Ensino Secundário' | translate }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div>
+              <div><b>{{ 'Escola:' | translate }}</b> {{ 'Escola Básica e Secundária de Barroselas' | translate }}</div>
+              <div><b>{{ 'Tipo de Ensino:' | translate }}</b> {{ 'Ensino Regular' | translate }}</div>
+              <div><b>{{ 'Curso:' | translate }}</b> {{ 'Ciências e Tecnologias' | translate }}</div>
+              <div><b>{{ 'Iniciado em:' | translate }}</b> {{ 'Setembro de 2018' | translate }}</div>
+              <div><b>{{ 'Concluído em:' | translate }}</b> {{ 'Julho de 2021' | translate }}</div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+
+        <ion-card class="modal-educacao">
+          <img src="../../../../assets/img/SobreMimEducacao_02.png"
+            alt="Escola Superior de Tecnologia e Gestão [IPVC]" />
+
+          <ion-card-header>
+            <ion-card-title class="titulo-ensino">{{ 'Ensino Superior Profissional' | translate }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div>
+              <div><b>{{ 'Escola:' | translate }}</b> {{ 'Escola Superior de Tecnologia e Gestão [IPVC]' | translate }}</div>
+              <div><b>{{ 'Tipo de Ensino:' | translate }}</b> {{ 'Curso Técnico Superior Profissional (CTeSP)' |translate }}</div>
+              <div><b>{{ 'Curso:' | translate }}</b> {{ 'Desenvolvimento Web e Multimédia' | translate }}</div>
+              <div><b>{{ 'Iniciado em:' | translate }}</b> {{ 'Setembro de 2021' | translate }}</div>
+              <div><b>{{ 'Concluído em:' | translate }}</b> {{ 'Junho de 2023' | translate }}</div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="modal-educacao">
+          <img src="../../../../assets/img/SobreMimEducacao_03.png" alt="Escola Superior de Tecnologia e Gestão [IPVC]" />
+
+          <ion-card-header>
+            <ion-card-title class="titulo-ensino">{{ 'Ensino Superior' | translate }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div>
+              <div><b>{{ 'Escola:' | translate }}</b> {{ 'Escola Superior de Tecnologia e Gestão [IPVC]' | translate }}</div>
+              <div><b>{{ 'Tipo de Ensino:' | translate }}</b> {{ 'Licenciatura' | translate }}</div>
+              <div><b>{{ 'Curso:' | translate }}</b> {{ 'Engenharia da Computação Gráfica e Multimédia' | translate }}</div>
+              <div><b>{{ 'Iniciado em:' | translate }}</b> {{ 'Setembro de 2023' | translate }}</div>
+              <div><b>{{ 'Concluído em:' | translate }}</b> {{ '[Por Concluir]' | translate }}</div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- PROJETOS -->
+  <div class="section">
+    <ion-button expand="block" (click)="setOpen_projetos(true)">
+      <ion-icon class="icon1" name="folder"></ion-icon>
+      <p>{{ 'Projetos' | translate }}</p>
+      <ion-icon class="icon2" name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen_projetos">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{ 'Projetos' | translate }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button fill="outline" color="danger" (click)="setOpen_projetos(false)">{{ 'Fechar' | translate}}</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-card class="modal-projetos">
+          <img class="projeto-img" src="../../../assets/img/SobreMimProjetos_01.png"
+            alt="Projeto: Roteiros Vianenses - Logo" s />
+          <ion-card-header>
+            <ion-card-title>{{ 'Roteiros Vianenses' | translate }}</ion-card-title>
+            <ion-card-subtitle>{{ 'Projeto concluído' | translate }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{ 'O Projeto Roteiros Vianenses encontra-se finalizado e teve como objetivo final ser uma plataforma que
+            possibilite aos utilizadores rotas turísticas pelos diferentes locais do distrito de Viana do Castelo, bem
+            como dar informações de locais com possível interesse de serem visitados entre muito mais.' | translate }}
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- REDES SOCIAIS -->
+  <ion-card class="redes-sociais-section">
+    <ion-card-header>
+      <ion-card-title>{{ 'Redes Sociais' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <a class="social" target="_blank" href="https://www.instagram.com/cruzzgabriel03/">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a class="social" target="_blank" href="https://www.facebook.com/cruzzgabriel03/">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a class="social" target="_blank" href="https://github.com/GabrielCruz2003">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a class="social" target="_blank" href="https://www.linkedin.com/in/cruzzgabriel03/">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

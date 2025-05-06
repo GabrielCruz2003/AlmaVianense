@@ -1,0 +1,20 @@
+// CSS para os botões de cada card de alojamento, fazendo com que fiquem alinhados e com o mesmo tamanho
+.buttons-alojamento {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .buttons-alojamento ion-button {
+    border-radius: 0;
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: var(--ion-color-appcor1);
+    flex: 1;
+    text-align: center;
+    --background: transparent;
+  }
+
+  

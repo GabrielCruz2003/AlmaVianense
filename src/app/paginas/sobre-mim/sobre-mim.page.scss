@@ -1,0 +1,109 @@
+/* Seccao Perfil */
+.perfil-section {
+    .email {
+        text-decoration: none;
+        color: inherit;
+    }
+    ion-card-title {
+        font-size: 24px;
+    }
+    img {
+        width: 75px;
+        height: 75px;
+        border-radius: 25%;
+        margin-left: 75px;
+    }
+}
+
+/* Seccoes */
+.section {
+    ion-button {
+        width: 80%;
+        margin: 10px auto;
+        text-transform: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .icon1 {
+        margin-right: 8px;
+        color: var(--ion-color-appcor1);
+    }
+    .icon2 {
+        color: var(--ion-color-appcor1);
+    }
+
+}
+
+/* Modal Idiomas */
+.modal-idiomas {
+    .idioma-row {
+    align-items: center;
+    }
+    .nome {
+    font-weight: bold;
+    font-size: 1.1em;
+    }
+    .tipo {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 4px;
+    }
+    .estrela {
+    color: var(--ion-color-appcor1);
+    font-size: 25px;
+    }
+    .flag-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .flag-img {
+    height: 75px;
+    width: auto;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Modal Educação */
+.modal-educacao{
+    .titulo-ensino{
+        font-weight: bold;
+        font-size:22px;
+    }
+}
+
+/* Modal Projetos */
+.modal-projetos{
+    .projeto-img{
+        margin-top: 15px;
+        margin-left: 15%;
+        width: 70%;
+    }
+    ion-card-content{
+        margin-inline: 5px;
+        text-align: justify;
+    }
+}
+
+
+/* Redes Sociais Section */
+.redes-sociais-section {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.redes-sociais-section ion-card-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.social {
+    margin-left: 15px;
+}
+
+.social ion-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
